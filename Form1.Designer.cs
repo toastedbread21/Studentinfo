@@ -1,7 +1,7 @@
 ﻿
-namespace Studentinfo
+namespace LocalDB
 {
-    partial class Form1
+    partial class btnLocalDB
     {
         /// <summary>
         /// Required designer variable.
@@ -29,194 +29,441 @@ namespace Studentinfo
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.idnum = new System.Windows.Forms.Label();
-            this.idnumbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lname = new System.Windows.Forms.Label();
-            this.fname = new System.Windows.Forms.Label();
-            this.score = new System.Windows.Forms.Label();
-            this.lnamebox = new System.Windows.Forms.TextBox();
-            this.scorebox = new System.Windows.Forms.TextBox();
-            this.fnamebox = new System.Windows.Forms.TextBox();
-            this.submit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Output = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label idnoLabel;
+            System.Windows.Forms.Label lastNameLabel;
+            System.Windows.Forms.Label firstNameLabel;
+            System.Windows.Forms.Label courseLabel;
+            System.Windows.Forms.Label levelLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnLocalDB));
+            this.studentInformationBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelDataSet = new LocalDB.ModelDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.studentInformationBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.idnoTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.courseTextBox = new System.Windows.Forms.TextBox();
+            this.levelTextBox = new System.Windows.Forms.TextBox();
+            this.studentInformationDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentInformationTableAdapter = new LocalDB.ModelDataSetTableAdapters.StudentInformationTableAdapter();
+            this.tableAdapterManager = new LocalDB.ModelDataSetTableAdapters.TableAdapterManager();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            idnoLabel = new System.Windows.Forms.Label();
+            lastNameLabel = new System.Windows.Forms.Label();
+            firstNameLabel = new System.Windows.Forms.Label();
+            courseLabel = new System.Windows.Forms.Label();
+            levelLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingNavigator)).BeginInit();
+            this.studentInformationBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // idnum
+            // idnoLabel
             // 
-            this.idnum.AutoSize = true;
-            this.idnum.Location = new System.Drawing.Point(18, 34);
-            this.idnum.Name = "idnum";
-            this.idnum.Size = new System.Drawing.Size(33, 13);
-            this.idnum.TabIndex = 0;
-            this.idnum.Text = "IDno ";
-            this.idnum.Click += new System.EventHandler(this.label1_Click);
+            idnoLabel.AutoSize = true;
+            idnoLabel.BackColor = System.Drawing.Color.Transparent;
+            idnoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idnoLabel.Location = new System.Drawing.Point(17, 71);
+            idnoLabel.Name = "idnoLabel";
+            idnoLabel.Size = new System.Drawing.Size(50, 20);
+            idnoLabel.TabIndex = 1;
+            idnoLabel.Text = "Idno:";
             // 
-            // idnumbox
+            // lastNameLabel
             // 
-            this.idnumbox.BackColor = System.Drawing.SystemColors.Menu;
-            this.idnumbox.Location = new System.Drawing.Point(84, 31);
-            this.idnumbox.Name = "idnumbox";
-            this.idnumbox.Size = new System.Drawing.Size(129, 20);
-            this.idnumbox.TabIndex = 1;
-            this.idnumbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.BackColor = System.Drawing.Color.Transparent;
+            lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lastNameLabel.Location = new System.Drawing.Point(17, 103);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(106, 20);
+            lastNameLabel.TabIndex = 3;
+            lastNameLabel.Text = "Last Name:";
             // 
-            // label2
+            // firstNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 29);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(237, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Please fill up the following information . ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.BackColor = System.Drawing.Color.Transparent;
+            firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            firstNameLabel.Location = new System.Drawing.Point(18, 137);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(108, 20);
+            firstNameLabel.TabIndex = 5;
+            firstNameLabel.Text = "First Name:";
             // 
-            // lname
+            // courseLabel
             // 
-            this.lname.AutoSize = true;
-            this.lname.Location = new System.Drawing.Point(17, 70);
-            this.lname.Name = "lname";
-            this.lname.Size = new System.Drawing.Size(53, 13);
-            this.lname.TabIndex = 3;
-            this.lname.Text = "Lastname";
+            courseLabel.AutoSize = true;
+            courseLabel.BackColor = System.Drawing.Color.Transparent;
+            courseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            courseLabel.Location = new System.Drawing.Point(18, 169);
+            courseLabel.Name = "courseLabel";
+            courseLabel.Size = new System.Drawing.Size(75, 20);
+            courseLabel.TabIndex = 7;
+            courseLabel.Text = "Course:";
+            courseLabel.Click += new System.EventHandler(this.courseLabel_Click);
             // 
-            // fname
+            // levelLabel
             // 
-            this.fname.AutoSize = true;
-            this.fname.Location = new System.Drawing.Point(17, 102);
-            this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(52, 13);
-            this.fname.TabIndex = 4;
-            this.fname.Text = "Firstname";
-            this.fname.Click += new System.EventHandler(this.label4_Click);
+            levelLabel.AutoSize = true;
+            levelLabel.BackColor = System.Drawing.Color.Transparent;
+            levelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            levelLabel.Location = new System.Drawing.Point(18, 204);
+            levelLabel.Name = "levelLabel";
+            levelLabel.Size = new System.Drawing.Size(60, 20);
+            levelLabel.TabIndex = 9;
+            levelLabel.Text = "Level:";
             // 
-            // score
+            // studentInformationBindingNavigator
             // 
-            this.score.AutoSize = true;
-            this.score.Location = new System.Drawing.Point(17, 137);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(56, 13);
-            this.score.TabIndex = 5;
-            this.score.Text = "QuizScore";
+            this.studentInformationBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.studentInformationBindingNavigator.BindingSource = this.studentInformationBindingSource;
+            this.studentInformationBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.studentInformationBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.studentInformationBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.studentInformationBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.studentInformationBindingNavigatorSaveItem});
+            this.studentInformationBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.studentInformationBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.studentInformationBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.studentInformationBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.studentInformationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.studentInformationBindingNavigator.Name = "studentInformationBindingNavigator";
+            this.studentInformationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.studentInformationBindingNavigator.Size = new System.Drawing.Size(820, 27);
+            this.studentInformationBindingNavigator.TabIndex = 0;
+            this.studentInformationBindingNavigator.Text = "bindingNavigator1";
             // 
-            // lnamebox
+            // bindingNavigatorAddNewItem
             // 
-            this.lnamebox.BackColor = System.Drawing.SystemColors.Menu;
-            this.lnamebox.Location = new System.Drawing.Point(84, 67);
-            this.lnamebox.Name = "lnamebox";
-            this.lnamebox.Size = new System.Drawing.Size(129, 20);
-            this.lnamebox.TabIndex = 6;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // scorebox
+            // studentInformationBindingSource
             // 
-            this.scorebox.BackColor = System.Drawing.SystemColors.Menu;
-            this.scorebox.Location = new System.Drawing.Point(84, 134);
-            this.scorebox.Name = "scorebox";
-            this.scorebox.Size = new System.Drawing.Size(129, 20);
-            this.scorebox.TabIndex = 8;
-            this.scorebox.TextChanged += new System.EventHandler(this.scorebox_TextChanged);
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.modelDataSet;
             // 
-            // fnamebox
+            // modelDataSet
             // 
-            this.fnamebox.BackColor = System.Drawing.SystemColors.Menu;
-            this.fnamebox.Location = new System.Drawing.Point(84, 99);
-            this.fnamebox.Name = "fnamebox";
-            this.fnamebox.Size = new System.Drawing.Size(129, 20);
-            this.fnamebox.TabIndex = 7;
+            this.modelDataSet.DataSetName = "ModelDataSet";
+            this.modelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // submit
+            // bindingNavigatorCountItem
             // 
-            this.submit.Location = new System.Drawing.Point(255, 544);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(90, 26);
-            this.submit.TabIndex = 10;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.button1_Click);
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // panel1
+            // bindingNavigatorDeleteItem
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.Output);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.scorebox);
-            this.panel1.Controls.Add(this.fnamebox);
-            this.panel1.Controls.Add(this.lnamebox);
-            this.panel1.Controls.Add(this.score);
-            this.panel1.Controls.Add(this.fname);
-            this.panel1.Controls.Add(this.lname);
-            this.panel1.Controls.Add(this.idnumbox);
-            this.panel1.Controls.Add(this.idnum);
-            this.panel1.Location = new System.Drawing.Point(11, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(334, 473);
-            this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // panel2
+            // bindingNavigatorMoveFirstItem
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Location = new System.Drawing.Point(21, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 5);
-            this.panel2.TabIndex = 14;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // panel3
+            // bindingNavigatorMovePreviousItem
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Location = new System.Drawing.Point(21, 175);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(289, 5);
-            this.panel3.TabIndex = 13;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
-            // Output
+            // bindingNavigatorSeparator
             // 
-            this.Output.BackColor = System.Drawing.SystemColors.Menu;
-            this.Output.FormattingEnabled = true;
-            this.Output.Location = new System.Drawing.Point(21, 227);
-            this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(289, 212);
-            this.Output.TabIndex = 15;
-            this.Output.SelectedIndexChanged += new System.EventHandler(this.Output_SelectedIndexChanged);
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
-            // label6
+            // bindingNavigatorPositionItem
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Information :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // Form1
+            // bindingNavigatorSeparator1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // studentInformationBindingNavigatorSaveItem
+            // 
+            this.studentInformationBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.studentInformationBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("studentInformationBindingNavigatorSaveItem.Image")));
+            this.studentInformationBindingNavigatorSaveItem.Name = "studentInformationBindingNavigatorSaveItem";
+            this.studentInformationBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.studentInformationBindingNavigatorSaveItem.Text = "Save Data";
+            this.studentInformationBindingNavigatorSaveItem.Click += new System.EventHandler(this.studentInformationBindingNavigatorSaveItem_Click);
+            // 
+            // idnoTextBox
+            // 
+            this.idnoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Idno", true));
+            this.idnoTextBox.Location = new System.Drawing.Point(137, 69);
+            this.idnoTextBox.Name = "idnoTextBox";
+            this.idnoTextBox.Size = new System.Drawing.Size(214, 22);
+            this.idnoTextBox.TabIndex = 2;
+            // 
+            // LastNameTextBox
+            // 
+            this.LastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "LastName", true));
+            this.LastNameTextBox.Location = new System.Drawing.Point(137, 101);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(214, 22);
+            this.LastNameTextBox.TabIndex = 4;
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "FirstName", true));
+            this.firstNameTextBox.Location = new System.Drawing.Point(137, 137);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(214, 22);
+            this.firstNameTextBox.TabIndex = 6;
+            // 
+            // courseTextBox
+            // 
+            this.courseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Course", true));
+            this.courseTextBox.Location = new System.Drawing.Point(137, 204);
+            this.courseTextBox.Name = "courseTextBox";
+            this.courseTextBox.Size = new System.Drawing.Size(214, 22);
+            this.courseTextBox.TabIndex = 8;
+            // 
+            // levelTextBox
+            // 
+            this.levelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Level", true));
+            this.levelTextBox.Location = new System.Drawing.Point(137, 169);
+            this.levelTextBox.Name = "levelTextBox";
+            this.levelTextBox.Size = new System.Drawing.Size(214, 22);
+            this.levelTextBox.TabIndex = 10;
+            // 
+            // studentInformationDataGridView
+            // 
+            this.studentInformationDataGridView.AutoGenerateColumns = false;
+            this.studentInformationDataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.studentInformationDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.studentInformationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentInformationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.studentInformationDataGridView.DataSource = this.studentInformationBindingSource;
+            this.studentInformationDataGridView.GridColor = System.Drawing.Color.Black;
+            this.studentInformationDataGridView.Location = new System.Drawing.Point(373, 45);
+            this.studentInformationDataGridView.Name = "studentInformationDataGridView";
+            this.studentInformationDataGridView.RowHeadersWidth = 51;
+            this.studentInformationDataGridView.RowTemplate.Height = 24;
+            this.studentInformationDataGridView.Size = new System.Drawing.Size(429, 277);
+            this.studentInformationDataGridView.TabIndex = 11;
+            this.studentInformationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentInformationDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Idno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Idno";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Course";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Course";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Level";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Level";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.StudentInformationTableAdapter = this.studentInformationTableAdapter;
+            this.tableAdapterManager.UpdateOrder = LocalDB.ModelDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Location = new System.Drawing.Point(32, 256);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 42);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Location = new System.Drawing.Point(195, 256);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 42);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Location = new System.Drawing.Point(114, 256);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 42);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.Location = new System.Drawing.Point(276, 256);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 42);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnLocalDB
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(357, 582);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.submit);
-            this.Controls.Add(this.label2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
-            this.Name = "Form1";
-            this.Text = "Student Information ";
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(820, 339);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.studentInformationDataGridView);
+            this.Controls.Add(idnoLabel);
+            this.Controls.Add(this.idnoTextBox);
+            this.Controls.Add(lastNameLabel);
+            this.Controls.Add(this.LastNameTextBox);
+            this.Controls.Add(firstNameLabel);
+            this.Controls.Add(this.firstNameTextBox);
+            this.Controls.Add(courseLabel);
+            this.Controls.Add(this.courseTextBox);
+            this.Controls.Add(levelLabel);
+            this.Controls.Add(this.levelTextBox);
+            this.Controls.Add(this.studentInformationBindingNavigator);
+            this.Name = "btnLocalDB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LocalDB";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingNavigator)).EndInit();
+            this.studentInformationBindingNavigator.ResumeLayout(false);
+            this.studentInformationBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,21 +471,38 @@ namespace Studentinfo
 
         #endregion
 
-        private System.Windows.Forms.Label idnum;
-        private System.Windows.Forms.TextBox idnumbox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lname;
-        private System.Windows.Forms.Label fname;
-        private System.Windows.Forms.Label score;
-        private System.Windows.Forms.TextBox lnamebox;
-        private System.Windows.Forms.TextBox scorebox;
-        private System.Windows.Forms.TextBox fnamebox;
-        private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListBox Output;
-        private System.Windows.Forms.Label label6;
+        private ModelDataSet modelDataSet;
+        private System.Windows.Forms.BindingSource studentInformationBindingSource;
+        private ModelDataSetTableAdapters.StudentInformationTableAdapter studentInformationTableAdapter;
+        private ModelDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator studentInformationBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton studentInformationBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox idnoTextBox;
+        private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.TextBox courseTextBox;
+        private System.Windows.Forms.TextBox levelTextBox;
+        private System.Windows.Forms.DataGridView studentInformationDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 
